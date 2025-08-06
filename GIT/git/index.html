@@ -1,0 +1,894 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация которая помогает.">
+      
+      
+        <meta name="author" content="Yuriy Teplyakov">
+      
+      
+        <link rel="canonical" href="https://yuriyteplyakov.github.io/MYWIKI_docs/GIT/git/">
+      
+      
+        <link rel="prev" href="../../mkdocs/mkdocs/">
+      
+      
+        <link rel="next" href="../../Django/env/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>GIT - My Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Wiki" class="md-header__button md-logo" aria-label="My Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GIT
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Wiki" class="md-nav__button md-logo" aria-label="My Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    GIT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    GIT
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ветки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ветки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Слияние веток
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удаленные репозитории
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Версионирование
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь между локальным и удаленным репозиториями
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Django
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Виртуальное окружение
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/creat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Создание базы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ветки
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ветки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Слияние веток
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удаленные репозитории
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Версионирование
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь между локальным и удаленным репозиториями
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Комманды<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>
+<p>Версия git</p>
+<blockquote>
+<p>git --version</p>
+</blockquote>
+</li>
+<li>
+<p>Установки</p>
+<blockquote>
+<p>git config --global user.name "Yuriy Teplyakov"
+git config --global user.email "...@mail.ru"</p>
+</blockquote>
+</li>
+<li>
+<p>Правильность настройки</p>
+<blockquote>
+<p>git config --list</p>
+</blockquote>
+</li>
+<li>
+<p>Местоположение конфигурационного файла</p>
+<blockquote>
+<p>git config --list --show -origin</p>
+</blockquote>
+</li>
+<li>
+<p>Создание текущей папки как git проект</p>
+<blockquote>
+<p>git init путь</p>
+</blockquote>
+</li>
+<li>
+<p>Индексация всех новых файлов</p>
+<blockquote>
+<p>git add .</p>
+</blockquote>
+</li>
+<li>
+<p>Только одного выбранного файла</p>
+<blockquote>
+<p>git add hello.txt</p>
+</blockquote>
+</li>
+<li>
+<p>Снимок состояния (фиксация отслеживаемых файлов)</p>
+<blockquote>
+<p>git commit -m 'комментарий'
+где -m параметр для комментария к коммиту</p>
+</blockquote>
+</li>
+<li>
+<p>блокнот по умолчанию как редактор</p>
+<blockquote>
+<p>git config --global core.editor notepad</p>
+</blockquote>
+</li>
+<li>
+<p>Узнать какие изменения внесены в кодовую базу проекта</p>
+<blockquote>
+<p>git diff</p>
+</blockquote>
+</li>
+<li>
+<p>изменения которые сейчас находятся в индексе</p>
+<blockquote>
+<p>git diff --cached</p>
+</blockquote>
+</li>
+<li>
+<p>совмещенная команда</p>
+<blockquote>
+<p>git commit -am 'комментарий'</p>
+</blockquote>
+</li>
+<li>
+<p>Удаление файла: откат изменений к предыдущему коммиту</p>
+<blockquote>
+<p>git checkout --hello.txt</p>
+</blockquote>
+</li>
+<li>
+<p>Перевод файла в НЕиндексируемое состояние</p>
+<blockquote>
+<p>git reset HEAD hello.txt</p>
+</blockquote>
+</li>
+<li>
+<p>История изменений от более свежих к более ранним</p>
+<blockquote>
+<p>git log
+пробел - двигаться дальше
+q -выход</p>
+</blockquote>
+</li>
+<li>
+<p>ограничение по количеству выводимых коммитов</p>
+<blockquote>
+<p>git log -2</p>
+</blockquote>
+</li>
+<li>
+<p>детальные изменения для каждого из коммитов</p>
+<blockquote>
+<p>git log -2 -p</p>
+</blockquote>
+</li>
+<li>
+<p>статистика для каждого из коммитов (список измененных файлов)</p>
+<blockquote>
+<p>git log -2 --stat</p>
+</blockquote>
+</li>
+<li>
+<p>Упрощение в одну строку</p>
+<blockquote>
+<p>git log --pretty=oneline</p>
+</blockquote>
+</li>
+<li>
+<p>Коммиты за определенный интервал времени</p>
+<blockquote>
+<p>git log --since = 2.week
+git log --until = 1.week
+ git log --author = "имя"</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_2">Ветки<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Создание новой ветки</p>
+<blockquote>
+<p>git branch feature</p>
+</blockquote>
+</li>
+<li>
+<p>Переключение на новую ветку</p>
+<blockquote>
+<p>git checkout feature</p>
+</blockquote>
+</li>
+<li>
+<p>Одновременное создание и переключение на новую ветку</p>
+<blockquote>
+<p>git checkout -b test</p>
+</blockquote>
+</li>
+<li>
+<p>Переименование ветки</p>
+<blockquote>
+<p>git branch -m feature to_delete</p>
+</blockquote>
+</li>
+<li>
+<p>Удаление ветки</p>
+<blockquote>
+<p>git branch -D to_delete</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="_3">Слияние веток<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>"В момент слияния нужно находится в ветке куда будем сливать изменения"</p>
+<ul>
+<li>Свержение из ветки test в ветку main<blockquote>
+<p>git merge test</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_4">Удаленные репозитории<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Отправка изменений на удаленный сервер<blockquote>
+<p>git push -u origin main</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_5">Версионирование<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>git tag v1.3.0
+git tag -a V1.4.0 -m "новый тэг"</p>
+</blockquote>
+<ul>
+<li>
+<p>Поиск по шаблону</p>
+<blockquote>
+<p>git tag -l v1.4*</p>
+</blockquote>
+</li>
+<li>
+<p>Удаление тэга</p>
+<blockquote>
+<p>git tag -d v1.3</p>
+</blockquote>
+</li>
+<li>
+<p>Ссылка на последний коммит</p>
+<blockquote>
+<p>git show HEAD</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_6">Связь между локальным и удаленным репозиториями<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>git remote add origin</p>
+</blockquote>
+<ul>
+<li>
+<p>Убедиться в том что соединение прошло успешно</p>
+<blockquote>
+<p>git remote -v</p>
+</blockquote>
+</li>
+<li>
+<p>(хэш коммита) сброс текущего состояния истории</p>
+<blockquote>
+<p>git reset</p>
+</blockquote>
+</li>
+<li>
+<p>История изменений коммитов и всех операций совершенных во время работы с репозиторием</p>
+<blockquote>
+<p>git reflog</p>
+</blockquote>
+</li>
+<li>
+<p>Не сбрасывает состояние репозитория, а создает новый коммит, который отменяет действия совершенные в прошлом</p>
+<blockquote>
+<p>git revert</p>
+</blockquote>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">yuriyteplyakov</span><span class="o">/</span><span class="n">mywiki</span><span class="o">.</span><span class="n">git</span>
+
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span> <span class="o">--</span><span class="n">force</span> <span class="p">(</span><span class="n">принудительно</span><span class="p">)</span>
+
+<span class="n">для</span> <span class="n">pages</span> <span class="n">на</span> <span class="n">github</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="o">--</span><span class="n">rebase</span> <span class="p">(</span><span class="n">Принудительное</span> <span class="n">обновление</span> <span class="n">БД</span> <span class="n">для</span> <span class="n">Actions</span> <span class="n">на</span> <span class="n">gh</span><span class="o">.</span><span class="n">com</span><span class="p">)</span> 
+
+<span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span> <span class="o">--</span><span class="n">force</span>
+
+<span class="c1"># без верхней команды не происходит git push</span>
+<span class="c1"># возможно проблемы с правами доступа</span>
+
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>  <span class="p">(</span><span class="n">изменения</span> <span class="n">с</span> <span class="n">удаленного</span> <span class="n">на</span> <span class="n">локальный</span> <span class="n">репозиторий</span><span class="p">)</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>  <span class="p">(</span><span class="n">изменения</span> <span class="n">с</span> <span class="n">локального</span> <span class="n">на</span> <span class="n">удаленный</span> <span class="n">репозиторий</span><span class="p">)</span>
+
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span> <span class="p">(</span><span class="n">записать</span> <span class="n">изменение</span> <span class="n">всех</span> <span class="n">файлов</span><span class="p">)</span>
+
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;TMC 6510 start&#39;</span> <span class="p">(</span><span class="n">коммит</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="">Yuriy Teplyakov</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
