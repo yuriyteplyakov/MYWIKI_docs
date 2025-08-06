@@ -1,3 +1,2 @@
 mkdocs-material
 mkdocs-awesome-pages-plugin
-collapse_single_pages
