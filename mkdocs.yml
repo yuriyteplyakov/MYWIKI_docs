@@ -25,14 +25,14 @@ site_author: Yuriy Teplyakov
 nav:
      
     - index:  index.md
-    - pip install: pip.md
-    - Dev: dev.md
-    - settings: settings.md
-    - Blog: blog/models.md
+    - MkDocs: mkdocs/mkdocs.md
+    - GIT: GIT/git.md
+    - Django:
+        - Виртуальное окружение: Django/env.md
+    - SQL:
+        - Создание базы: SQL/creat.md
 
     
-    
-   
 
 #theme: readthedocs
 theme:
