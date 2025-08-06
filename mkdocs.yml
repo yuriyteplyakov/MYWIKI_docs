@@ -1,0 +1,75 @@
+# [Обязательное] Название сайта
+site_name: My Wiki
+
+
+# Базовый адрес сайта
+site_url: https://yuriyteplyakov.github.io/MYWIKI_docs
+
+
+# Описание сайта. Добавляется в meta в html-заголовке каждой страницы.
+site_description: Документация которая помогает.
+
+
+# Относительный путь, который в сочетании со ссылкой на репозиторий (repo_url)
+# и относительным адресом страницы даст адрес, по которому можно вызвать
+# редактор страницы. Для repo_url-ов известных площадок (например,
+# GitHub или GitLab можно оставить пустым - он подставится автоматически)
+edit_uri: ""
+
+
+# Автор (или авторы) сайта. Добавляется в html-заголовок каждой страницы.
+site_author: Yuriy Teplyakov
+
+
+# Структура навигации генерируемого сайта.
+nav:
+     
+    - index:  index.md
+    - pip install: pip.md
+    - Dev: dev.md
+    - settings: settings.md
+    - Blog: blog/models.md
+
+    
+    
+   
+
+#theme: readthedocs
+theme:
+  name: material
+
+
+dev_addr:
+    127.0.0.1:8200
+
+
+#markdown_extensions:
+    #- toc:
+        #permalink: True
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets 
+  - pymdownx.snippets
+  - toc:
+      permalink: True
+  - admonition
+  - attr_list
+  - def_list
+  - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+
+
+copyright: Copyright &copy; 2025 <a href="">Yuriy Teplyakov</a>.
+
+
+# сворачивание страниц
+collapse_single_pages: true
+
+plugins:
+    - search
+    - awesome-pages
+
