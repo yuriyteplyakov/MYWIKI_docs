@@ -58,16 +58,12 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
-  - mdx_gh_links:
-        user: mkdocs
-        repo: mkdocs
 
 
 copyright: Copyright &copy; 2025 <a href="">Yuriy Teplyakov</a>.
 
 
-# сворачивание страниц
-collapse_single_pages: true
+# сворачивание страниц БОЛЬШЕ НЕ ПОДДЕРЖИВАЕТСЯ collapse_single_pages: true (для material)
 
 plugins:
     - search
