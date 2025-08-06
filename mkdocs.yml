@@ -66,6 +66,9 @@ copyright: Copyright &copy; 2025 <a href="">Yuriy Teplyakov</a>.
 # сворачивание страниц БОЛЬШЕ НЕ ПОДДЕРЖИВАЕТСЯ collapse_single_pages: true (для material)
 
 plugins:
-    - search
+    - search:
+        lang:
+            ru
+            en
     - awesome-pages
 
