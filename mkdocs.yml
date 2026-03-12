@@ -31,7 +31,12 @@ nav:
     - SQL:
         - Создание базы: SQL/creat.md
     - ANALYST:
-        - ITSM: Analyst/itsm.md
+        - ITSM/ITIL: Analyst/itsm.md
+        - SLA: Analyst/sla.md
+        - workflow: Analyst/workflow.md
+        - Service Desk: Analyst/service.md
+        - Инцидент/Проблема: Analyst/problem.md
+
 
     
 
