@@ -1,7 +1,5 @@
 # [Обязательное] Название сайта
 site_name: My Wiki
-
-
 # Базовый адрес сайта
 site_url: https://yuriyteplyakov.github.io/MYWIKI_docs
 
@@ -40,6 +38,16 @@ nav:
 #theme: readthedocs
 theme:
   name: material
+  features:
+        - navigation.tabs
+        - navigation.sections
+        - toc.integrate
+        - navigation.top
+        - search.suggest
+        - search.highlight
+        - content.tabs.link
+        - content.code.annotation
+        - content.code.copy
 
 
 dev_addr:
