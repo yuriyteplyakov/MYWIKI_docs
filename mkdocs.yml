@@ -36,6 +36,7 @@ nav:
         - workflow: Analyst/workflow.md
         - Service Desk: Analyst/service.md
         - Инцидент/Проблема: Analyst/problem.md
+        - HTTP: Analyst/http.md
 
 
     
