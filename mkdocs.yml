@@ -29,8 +29,11 @@ nav:
     - GIT: GIT/git.md
     - Django:
         - Виртуальное окружение: Django/env.md
+        - pip: Django/pip.md
     - SQL:
         - Создание базы: SQL/creat.md
+    - ANALYST:
+        - ITSM: Analyst/itsm.md
 
     
 
