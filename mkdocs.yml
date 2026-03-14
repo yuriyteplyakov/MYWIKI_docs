@@ -37,6 +37,10 @@ nav:
         - Service Desk: Analyst/service.md
         - Инцидент/Проблема: Analyst/problem.md
         - HTTP: Analyst/http.md
+        - API: Analyst/api.md
+        - ООП: Analyst/oop.md
+        - SQL: Analyst/sql.md
+        - Логи: Analyst/logs.md
 
 
     
@@ -44,16 +48,6 @@ nav:
 #theme: readthedocs
 theme:
   name: material
-  features:
-        - navigation.tabs
-        - navigation.sections
-        - toc.integrate
-        - navigation.top
-        - search.suggest
-        - search.highlight
-        - content.tabs.link
-        - content.code.annotation
-        - content.code.copy
 
 
 dev_addr:
