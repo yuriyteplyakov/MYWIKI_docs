@@ -36,11 +36,14 @@ nav:
         - workflow: Analyst/workflow.md
         - Service Desk: Analyst/service.md
         - Инцидент/Проблема: Analyst/problem.md
+        - Анализ требований: Analyst/treb.md
+        - API/интеграции: Analyst/api.md
         - HTTP: Analyst/http.md
-        - API: Analyst/api.md
         - ООП: Analyst/oop.md
         - SQL: Analyst/sql.md
         - Логи: Analyst/logs.md
+        - Вопросы мои: Analyst/questions.md
+        
 
 
     

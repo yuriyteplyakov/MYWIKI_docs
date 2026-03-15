@@ -91,11 +91,17 @@ ORDER BY 2 DESC
 
 ## Соединение
 
+JOIN = INNER JOIN (внутреннее соединение/только совпадение)
+
 ```sql
 SELECT t.id, u.name
 FROM tickets t
 JOIN users u ON t.user_id=u.id
 ```
+
+### LEFT JOIN (LEFT OUTER JOIN - внешнее левое соединение)
+
+выводит все записи из левой таблицы
 
 > Оконные функции (LEAD, LAG, ROW NUMBER, RANK)
 
@@ -108,4 +114,23 @@ tickets
 SELECT user_id, COUNT(*)
 FROM tickets
 GROUP BY user_id
+```
+
+
+**Вывести: имя пользователя и количество его заявок**
+
+```sql
+SELECT u.name, COUNT(t.id)
+FROM users u
+JOIN tickets t ON u.id = t.user_id
+GROUP BY u.name;
+```
+
+**Показать включая пользователей без заявок.**
+
+```sql
+SELECT u.name, COUNT(t.id)
+FROM users u
+LEFT JOIN tickets t ON u.id = t.user_id
+GROUP BY u.name;
 ```
