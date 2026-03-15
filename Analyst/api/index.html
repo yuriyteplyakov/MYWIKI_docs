@@ -1,0 +1,1691 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация которая помогает.">
+      
+      
+        <meta name="author" content="Yuriy Teplyakov">
+      
+      
+        <link rel="canonical" href="https://yuriyteplyakov.github.io/MYWIKI_docs/Analyst/api/">
+      
+      
+        <link rel="prev" href="../treb/">
+      
+      
+        <link rel="next" href="../http/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>API/интеграции - My Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Wiki" class="md-header__button md-logo" aria-label="My Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API/интеграции
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Wiki" class="md-nav__button md-logo" aria-label="My Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GIT/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GIT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Django
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Django
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Виртуальное окружение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Django/pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SQL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/creat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Создание базы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANALYST
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ANALYST
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itsm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITSM/ITIL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SLA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Desk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инцидент/Проблема
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../treb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Анализ требований
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API/интеграции
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API/интеграции
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интеграция — это когда две системы обмениваются данными автоматически.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-application-programming-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API — (Application Programming Interface, программный интерфейс приложения)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Есть несколько способов интеграций.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Есть несколько способов интеграций.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rest-api-representational-state-transfer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. REST API (Representational State Transfer) - самый распространённый
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. REST API (Representational State Transfer) - самый распространённый">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные характеристики и принципы REST API:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Файловый обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-message-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Message queue (очереди)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Прямой доступ к базе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Прямой доступ к базе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главные отличия
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как проверить API?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На примере curl из моего проекта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как понять что проблема в интеграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как понять что проблема в интеграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как искать проблему
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мой проект магазина на примере интеграции с Юкасса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Мой проект магазина на примере интеграции с Юкасса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логика
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создание логгера:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Создание логгера:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реальный сценарий диагностики
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ООП
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Логи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы мои
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Интеграция — это когда две системы обмениваются данными автоматически.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-application-programming-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API — (Application Programming Interface, программный интерфейс приложения)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Есть несколько способов интеграций.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Есть несколько способов интеграций.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rest-api-representational-state-transfer-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. REST API (Representational State Transfer) - самый распространённый
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. REST API (Representational State Transfer) - самый распространённый">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Основные характеристики и принципы REST API:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Файловый обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-message-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Message queue (очереди)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Прямой доступ к базе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Прямой доступ к базе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Главные отличия
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как проверить API?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        На примере curl из моего проекта
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как понять что проблема в интеграции
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как понять что проблема в интеграции">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как искать проблему
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Мой проект магазина на примере интеграции с Юкасса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Мой проект магазина на примере интеграции с Юкасса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логика
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создание логгера:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Создание логгера:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реальный сценарий диагностики
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="_1">Интеграция — это когда две системы обмениваются данными автоматически.<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Простой пример:</strong></p>
+<p>Service Desk ↔ CRM
+Service Desk ↔ бухгалтерия
+Service Desk ↔ мониторинг серверов</p>
+<p><strong><em>Например:</em></strong></p>
+<p>сервер падает
+система мониторинга обнаруживает это
+автоматически создаётся инцидент в Service Desk</p>
+<h1 id="api-application-programming-interface">API —  (Application Programming Interface, программный интерфейс приложения)<a class="headerlink" href="#api-application-programming-interface" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Это набор правил и способов, позволяющих разным компьютерным программам обмениваться данными и взаимодействовать друг с другом. Что-то вроде «переводчика», который позволяет одному сервису использовать функции другого, например, при оплате покупок на сайте картой.</p>
+</blockquote>
+<p><strong>Простыми словами:</strong></p>
+<p>API = набор правил как одна система может обратиться к другой</p>
+<p><strong>Основные аспекты API:</strong></p>
+<p>Принцип работы: Работает по схеме «запрос-ответ»: одно приложение (клиент) отправляет запрос к другому (серверу), который обрабатывает его и возвращает результат.</p>
+<p>Пример: Когда вы ищете авиабилеты, сайт-агрегатор использует API для отправки запросов к базам данных разных авиакомпаний, чтобы показать актуальные цены на одном экране.</p>
+<p>Применение: API повсеместно используются для интеграции CRM-систем, работы мобильных приложений с серверами, получения данных о погоде или оплаты через банк.</p>
+<p>Преимущества: Ускорение разработки, так как не нужно создавать функции с нуля, а можно использовать готовые решения. </p>
+<p>API выступает в роли посредника, скрывая внутреннюю сложность одной системы от другой, обеспечивая простой обмен информацией.</p>
+<h1 id="_2">Есть несколько способов интеграций.<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h2 id="1-rest-api-representational-state-transfer-">1. REST API (Representational State Transfer) - самый распространённый<a class="headerlink" href="#1-rest-api-representational-state-transfer-" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>это архитектурный стиль взаимодействия между компонентами распределенного приложения, использующий протокол HTTP для обмена данными обычно в формате JSON.
+Он позволяет клиенту (например, браузеру) управлять ресурсами на сервере. </p>
+</blockquote>
+<p><strong>Основная идея:</strong> - каждый объект имеет URL</p>
+<h3 id="rest-api">Основные характеристики и принципы REST API:<a class="headerlink" href="#rest-api" title="Permanent link">&para;</a></h3>
+<p><strong>Клиент-серверная архитектура:</strong> Разделение ответственности; клиент не заботится о хранении данных, сервер — об интерфейсе.</p>
+<p><strong>Отсутствие состояния (Stateless):</strong> Сервер не хранит информацию о предыдущих запросах клиента. Каждый запрос должен содержать все данные, необходимые для его выполнения.</p>
+<p><strong>Использование ресурсов:</strong> Всё является ресурсом, который идентифицируется уникальным URI (например, /users/123).</p>
+<p><strong>Кэширование:</strong> Ответы сервера могут кэшироваться для ускорения работы.</p>
+<p><strong>REST использует стандартные методы HTTP:</strong>
+- GET — получение данных.
+- POST — создание данных.
+- PUT/PATCH — обновление данных/частичное обновление.
+- DELETE — удаление данных.</p>
+<p>REST API широко используется для создания веб-приложений, мобильных приложений и микросервисов, обеспечивая высокую производительность, гибкость и независимость клиентской и серверной частей. 
+Его главная особенность — использование принципов REST, которые делают взаимодействие логичным, простым и масштабируемым.</p>
+<p><strong>пример</strong>
+система A → HTTP запрос → система B
+Создание заявки: POST /tickets</p>
+<p><strong>Тело запроса:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VPN не работает&quot;</span><span class="p">,</span>
+<span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+<span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VPN не работает&quot;</span><span class="p">,</span>
+<span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OPEN&quot;</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+<span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span>
+<span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;OPEN&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="2">2. Файловый обмен<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p><strong>пример:</strong>
+система A → файл CSV/XML → система B
+export_users.csv</p>
+<h2 id="3-message-queue">3. Message queue (очереди)<a class="headerlink" href="#3-message-queue" title="Permanent link">&para;</a></h2>
+<p><strong>Например:</strong></p>
+<p>Kafka
+RabbitMQ</p>
+<p>Система кладёт сообщение в очередь, другая его читает.</p>
+<h2 id="4">4. Прямой доступ к базе<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>Редко используется.
+system A → database B</p>
+<h3 id="_3">Главные отличия<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>API → инструмент</p>
+<p>REST → способ его реализации</p>
+<p>интеграция → применение</p>
+<h3 id="api">Как проверить API?<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Postman</p>
+<p>curl</p>
+<p>Insomnia</p>
+</blockquote>
+<h2 id="curl">На примере curl из моего проекта<a class="headerlink" href="#curl" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>curl -X POST https://hmelon.ru/order/telegram/webhook/   -H &quot;Content-Type: application/json&quot;   -d &#39;{&quot;update_id&quot;:123,&quot;message&quot;:{&quot;text&quot;:&quot;test&quot;}}&#39;
+
+-X POST — указывает, что нужно использовать HTTP-метод POST
+
+https://hmelon.ru/order/telegram/webhook/ — это URL-адрес, на который отправляется запрос
+
+-H &quot;Content-Type: application/json&quot; — это заголовок (header) запроса. Он говорит серверу: «Я отправляю тебе данные в формате JSON»
+
+-d &#39;{&quot;update_id&quot;:123,&quot;message&quot;:{&quot;text&quot;:&quot;test&quot;}}&#39; — это тело (data) запроса.
+</code></pre></div>
+<h2 id="_4">Как понять что проблема в интеграции<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>Типичный сценарий:</strong> Пользователь говорит: инциденты не создаются автоматически</p>
+<p><em>Возможные причины:</em></p>
+<ul>
+<li>API не отвечает</li>
+<li>неверный токен</li>
+<li>ошибка JSON</li>
+<li>endpoint изменился</li>
+</ul>
+<h3 id="_5">Как искать проблему<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><strong>Алгоритм:</strong></p>
+<ol>
+<li>проверить отправляется ли запрос</li>
+<li>проверить HTTP код</li>
+<li>проверить тело ответа</li>
+<li>посмотреть логи</li>
+</ol>
+<h2 id="_6">Мой проект магазина на примере интеграции с Юкасса<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Суть:</strong> В проекте реализована интеграция с платежной системой YooKassa через REST API.</p>
+<p>Backend на Django создаёт платеж через API YooKassa и получает ссылку для оплаты. После оплаты YooKassa отправляет webhook уведомление на наш сервер. Backend обрабатывает webhook и обновляет статус заказа в базе данных.</p>
+<h3 id="_7">Логика<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>пользователь нажимает "Оплатить"</li>
+<li>frontend отправляет запрос в Django</li>
+<li>Django создаёт платеж через REST API YooKassa</li>
+<li>YooKassa возвращает URL оплаты</li>
+<li>пользователь оплачивает</li>
+<li>YooKassa отправляет webhook</li>
+<li>backend обновляет статус заказа</li>
+</ol>
+<p><strong>сама интеграция происходит в приложении payment</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">payment</span> <span class="o">=</span> <span class="n">YooPayment</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+    <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;RUB&quot;</span>
+    <span class="p">}</span>
+<span class="p">},</span> <span class="n">idempotence_key</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Фактически библиотека делает:</strong> POST https://api.yookassa.ru/v3/payments</p>
+<p><strong>С телом в JSON:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1200.00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RUB&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Заказ #123&quot;</span>
+<span class="p">}</span>
+
+<span class="err">#</span><span class="w"> </span><span class="err">ответ</span><span class="w"> </span><span class="err">API</span>
+
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2a7c4f...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;confirmation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;confirmation_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://yookassa.ru/...&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Получаем:</strong></p>
+<p>payment.id</p>
+<p>payment.status</p>
+<p>payment.confirmation.confirmation_url</p>
+<blockquote>
+<p>Webhook — это обратный REST запрос от Юкассы</p>
+<p>Когда клиент оплатил:</p>
+<p>YooKassa делает запрос на мой сервер.</p>
+<p>POST /yookassa/webhook</p>
+</blockquote>
+<p><strong>Реализация в этом коде:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nd">@csrf_exempt</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">yookassa_webhook</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</code></pre></div>
+<h2 id="_8">Создание логгера:<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># каждый модуль пишет свои логи</span>
+</code></pre></div>
+<p><strong>Если API YooKassa падает:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># вызывается исключение</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="c1"># записывается log</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="c1"># HTTP ответ</span>
+<span class="n">status</span><span class="o">=</span><span class="mi">500</span>
+</code></pre></div></p>
+<blockquote>
+<p>Платеж хранится в модели payment (локальное зеркало для данных платежа), если API недоступно, мы всё равно знаем статус</p>
+</blockquote>
+<p><strong>Проверка статуса через API</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">YooPayment</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">payment</span><span class="o">.</span><span class="n">payment_id</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Это ещё один REST API запрос.</em></p>
+<p><strong>Фактически:</strong></p>
+<blockquote>
+<p>GET https://api.yookassa.ru/v3/payments/{payment_id}</p>
+</blockquote>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;succeeded&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Если статус изменился: обновляем БД</p>
+<p><strong>Также реализована защита от дублей (принцип идемпотентности)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># если пользователь нажмет оплатить случайно второй раз</span>
+<span class="n">idempotence_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+</code></pre></div>
+<p><strong>Безопасность платежа</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># ПРОВЕРКА: Сумма клиента совпадает с суммой товаров</span>
+<span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">items_total</span> <span class="o">-</span> <span class="n">client_amount</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.01</span> <span class="c1"># Допускаем погрешность в 1 копейку</span>
+<span class="c1"># Это защита от: подмены суммы на frontend</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Минимальная сумма</span>
+<span class="k">if</span> <span class="n">items_total</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="c1"># Проверка требований API.</span>
+ <span class="c1"># ЮKassa не принимает платежи меньше 1 рубля.</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1">#  ПРОВЕРКА: Срок оплаты (24 часа)</span>
+<span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">created</span> <span class="o">&lt;</span> <span class="n">timezone</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="c1"># Бизнес-логика.</span>
+</code></pre></div>
+<p><strong>Что происходит если webhook не пришёл</strong></p>
+<p>функция payment_status, там используется <strong>YooPayment.find_one()</strong> проверка активного статуса</p>
+<p><strong>как искать проблему интеграции</strong></p>
+<ol>
+<li>проверить HTTP запрос</li>
+<li>проверить ответ API</li>
+<li>проверить логи backend</li>
+<li>проверить webhook</li>
+<li>проверить статус платежа через API</li>
+</ol>
+<p><strong>что будет если API не отвечает</strong></p>
+<p>В таком случае backend должен обработать исключение, залогировать ошибку и вернуть пользователю понятное сообщение.</p>
+<h3 id="_9">Реальный сценарий диагностики<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><strong>Проблема:</strong> пользователь оплатил, но заказ не обновился</p>
+<p>Проверка:</p>
+<ol>
+<li>проверить webhook лог</li>
+<li>проверить таблицу payment</li>
+<li>проверить order.status</li>
+<li>проверить mark_paid()</li>
+</ol>
+<blockquote>
+<p>Если пользователь сообщает о проблеме, я сначала уточняю симптомы. Затем проверяю логи приложения на сервере. Если ошибка связана с интеграцией, проверяю ответ API и webhook. Также могу проверить состояние данных в базе.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href="">Yuriy Teplyakov</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
